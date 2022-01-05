@@ -55,6 +55,7 @@ const generateMessages = (customersArray) => {
 
 // search function based on candy names and prices
 const searchCandies = (name, price) => {
+  name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
   filterByPrice = candies.filter(candy => candy.price < price).map(candy => {
     return candy.name;
   });
@@ -62,8 +63,6 @@ const searchCandies = (name, price) => {
 };
 
 module.exports = searchCandies;
-
-console.log(searchCandies('Ma', 10));
 
 // Testing functions
 
@@ -74,3 +73,5 @@ console.log(searchCandies('Ma', 10));
 // console.log(filterLongNumbers([]));
 
 // console.log(generateMessages(namesAndDiscounts));
+
+// console.log(searchCandies('MA', 10));

@@ -16,4 +16,8 @@ describe('searchCandies', () => {
   it('returns all candy that is below the maximum price', () => {
     expect(searchCandies('S', 4)).toEqual([ 'Skitties', 'Skittles' ]);
   });
+
+  it('returns relevant candies regardless of search casing', () => {
+    expect(searchCandies('ma', 10)).toEqual([ 'Maltesers', 'Mars' ]);
+  });
 });
