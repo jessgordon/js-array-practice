@@ -20,4 +20,6 @@ describe('searchCandies', () => {
   it('returns relevant candies regardless of search casing', () => {
     expect(searchCandies('ma', 10)).toEqual([ 'Maltesers', 'Mars' ]);
   });
+
 });
+

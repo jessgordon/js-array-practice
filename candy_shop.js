@@ -75,3 +75,4 @@ module.exports = searchCandies;
 // console.log(generateMessages(namesAndDiscounts));
 
 // console.log(searchCandies('MA', 10));
+
