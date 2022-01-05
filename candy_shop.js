@@ -5,7 +5,13 @@ const numbers = [
   'aaaaaaaabbbbbbbcccccdddddddd' 
 ];
 
-const names = ['Anna', 'Laura', 'Josh', 'Min', 'Karla'];
+const namesAndDiscounts = [
+  { name: 'Anna', discount: 50 },
+  { name: 'Laura', discount: 40 },
+  { name: 'Josh', discount: 30 },
+  { name: 'Min', discount: 50 },
+  { name: 'Karla', discount: 60 }
+];
 
 // add number to a batch of ids if there are less than 5 ids already in the array
 const addToBatch = (array, number) => {
@@ -20,14 +26,14 @@ const checkLength = (number) => {
   return number.length <= 10;
 }
 
-const filterLongNumbers = (array_of_numbers) => {
-  return array_of_numbers.filter(checkLength);
+const filterLongNumbers = (numbersArray) => {
+  return numbersArray.filter(checkLength);
 }
 
 // personalised text message using map function
-const generateMessages = (names_array) => {
-  return names_array.map(name => {
-    return `Hi ${name}! 50% off our best candies for you today!`;
+const generateMessages = (customersArray) => {
+  return customersArray.map(customer => {
+    return `Hi ${customer.name}! ${customer.discount}% off our best candies for you today!`;
   });
 }
 
@@ -40,4 +46,4 @@ const generateMessages = (names_array) => {
 // console.log(filterLongNumbers(['4763687363', '7867867862']));
 // console.log(filterLongNumbers([]));
 
-// console.log(generateMessages(names));
+// console.log(generateMessages(namesAndDiscounts));
