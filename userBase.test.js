@@ -3,8 +3,8 @@ const UserBase = require('./userBase');
 
 describe('UserBase Class', () => {
 
-  let users = [ new User('Uma'), new User('Josh'), new User('Ollie')];
-  let userBase = new UserBase(users);
+  const users = [ new User('Uma'), new User('Josh'), new User('Ollie')];
+  const userBase = new UserBase(users);
 
   it('creates a new instance of the UserBase class', () => {
     expect(new UserBase(users)).toBeInstanceOf(UserBase);

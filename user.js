@@ -12,10 +12,4 @@ class User {
   }
 }
 
-const user = new User('Uma');
-
-console.log(user)
-console.log(user.getName())
-console.log(user.getIntroduction())
-
 module.exports = User;
